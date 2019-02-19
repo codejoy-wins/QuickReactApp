@@ -30,11 +30,20 @@ export class Form extends Component {
   render() {
 
     const { name, position, team} = this.state;
+
+    const necessary = {
+        "color": "gold",
+        "background": "green",
+        "padding":"40px",
+        "opacity":".5",
+
+    }
+    
     return (
       <form onSubmit={this.onFormSubmit}>
-          name: <input name="name" onChange={this.tracker} value={name}></input>
-          position: <input name="position" onChange={this.tracker} value={position}></input>
-          team: <input name="team" onChange={this.tracker} value={team}></input>
+          <label>name:</label><input name="name" onChange={this.tracker} value={name} style={necessary}></input>
+          <label>position:</label><input name="position" onChange={this.tracker} value={position}></input>
+          <label>team:</label><input name="team" onChange={this.tracker} value={team}></input>
 
         <button type="submit">Obey</button>
       </form>
