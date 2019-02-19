@@ -20,11 +20,6 @@ export class Form extends Component {
         })
     }
 
-    // submitForm = e => {
-    //     console.log('from form.js');
-    //     this.props.obey(this.state);
-    //     this.setState(this.initialState);
-    // }
     // from tania
     onFormSubmit = (event) => {
         event.preventDefault();

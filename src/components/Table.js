@@ -3,7 +3,8 @@ import React, { Component } from 'react'
 export class Table extends Component {
   render() {
       const livePlayers = this.props.players;
-      const rows = this.props.players.map((thing, spot) => {
+      console.log(livePlayers);
+      const rows = livePlayers.map((thing, spot) => {
           return (
               <tr key = {spot}>
                   <td>{thing.name}</td>
@@ -12,7 +13,7 @@ export class Table extends Component {
               </tr>
           )
       });
-    return <tbody>{rows}</tbody>
+    return <table><tbody>{rows}</tbody></table>
   }
 }
 

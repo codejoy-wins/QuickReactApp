@@ -5,7 +5,13 @@ import Table from './components/Table';
 
 const Heading = ()=>{
   return (
-    <h2>hello world</h2>
+    <h2>Add your favorite players to the list</h2>
+  )
+}
+
+const Ending = ()=>{
+  return (
+    <h5>Thanks for using <a href="https://maxjann.com">my</a> website</h5>
   )
 }
 
@@ -32,14 +38,14 @@ handleSubmit = player => {
     players: myList,
   })
 }
-
+// I will add a delete button later
   render() {
     return (
       <div className="App">
         < Heading  />
         < Form obey={this.handleSubmit}/>
-        <h1>hey</h1>
         < Table players={this.state.players}/>
+        < Ending />
       </div>
     );
   }
