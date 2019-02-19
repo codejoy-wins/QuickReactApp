@@ -1,25 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/Form';
+import Table from './components/Table';
+
+const Heading = ()=>{
+  return (
+    <h2>hello world</h2>
+  )
+}
 
 class App extends Component {
+  state = {
+    players: [
+      {
+        name: "Baker",
+        postion: "QB",
+        team: "browns",
+      }
+    ],
+  }
+
+  // handle submit
+handleSubmit = player => {
+  console.log("from app.js")
+  console.log(player.name);
+  // I have the name I typed in the form here... just trouble changing the state with spread operators
+  let myList = [...this.state.players, player];
+  console.log(myList);
+  // Prevent DEFAULT!!!
+  this.setState({
+    players: myList,
+  })
+}
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        < Heading  />
+        < Form obey={this.handleSubmit}/>
+        <h1>hey</h1>
+        < Table players={this.state.players}/>
       </div>
     );
   }
