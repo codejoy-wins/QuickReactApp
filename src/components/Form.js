@@ -41,9 +41,9 @@ export class Form extends Component {
     
     return (
       <form onSubmit={this.onFormSubmit}>
-          <label>name:</label><input name="name" onChange={this.tracker} value={name} style={necessary}></input>
-          <label>position:</label><input name="position" onChange={this.tracker} value={position}></input>
-          <label>team:</label><input name="team" onChange={this.tracker} value={team}></input>
+          <label>Who are you?</label><input name="name" onChange={this.tracker} value={name} style={necessary}></input>
+          <label>What do you do?</label><input name="position" onChange={this.tracker} value={position} style={necessary}></input>
+          <label>What house do you fight for?</label><input name="team" onChange={this.tracker} value={team} style={necessary}></input>
 
         <button type="submit">Obey</button>
       </form>
