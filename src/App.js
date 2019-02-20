@@ -15,6 +15,8 @@ const Ending = ()=>{
   )
 }
 
+
+
 class App extends Component {
   state = {
     players: [
@@ -25,7 +27,17 @@ class App extends Component {
       }
     ],
   }
+kill = id => {
+  console.log(`killing ${id}`);
+  console.log(`current state players ${this.state.players}`);
+  console.log(`current state players ${this.state.players.filter((player, i)=>id!==i)}`);
+  const newList = this.state.players.filter((player, i)=>id!==i);
+  this.setState({
+    players: newList,
+  })
 
+
+}
   // handle submit
 handleSubmit = player => {
   console.log("from app.js")
@@ -44,7 +56,7 @@ handleSubmit = player => {
       <div className="App">
         < Heading  />
         < Form obey={this.handleSubmit}/>
-        < Table players={this.state.players}/>
+        < Table players={this.state.players} kill={this.kill}/>
         < Ending />
       </div>
     );
