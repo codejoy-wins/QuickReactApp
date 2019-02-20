@@ -32,10 +32,11 @@ export class Form extends Component {
     const { name, position, team} = this.state;
 
     const necessary = {
-        "color": "gold",
+        "color": "black",
         "background": "green",
         "padding":"40px",
-        "opacity":".5",
+        "opacity":".8",
+        "fontSize": "3rem"
 
     }
     

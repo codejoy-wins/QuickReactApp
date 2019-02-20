@@ -30,7 +30,7 @@ const Ending = ()=>{
 
 const Image = (props)=>{
   return (
-    <img src={props.picture} height ="600rem"></img>
+    <img src={props.picture} height ="720rem"></img>
   )
 }
 

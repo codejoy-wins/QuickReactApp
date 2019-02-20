@@ -9,17 +9,29 @@ export class Table extends Component {
       // filter list and replace list with only guys without id match
       this.props.kill(id);
     }
+    const Sty = {
+      "color":"#4f4",
+      "fontSize": "50px"
+    }
 
+    const Del = {
+      "color": "#000",
+      "padding":".4rem",
+      "backgroundColor":"#f00",
+      "fontSize": "3rem",
+      "textAlign": "center",
+      "opacity": ".3"
+    }
 
       const livePlayers = this.props.players;
       console.log(livePlayers);
       const rows = livePlayers.map((thing, spot) => {
           return (
               <tr key = {spot} >
-                  <td>{thing.name}</td>
-                  <td>{thing.position}</td>
-                  <td>{thing.team}</td>
-                  <td onClick={()=>destroyer(spot)}>Delete?</td>
+                  <td style={Sty}>{thing.name}</td>
+                  <td style={Sty}>{thing.position}</td>
+                  <td style={Sty}>{thing.team}</td>
+                  <td style={Del} onClick={()=>destroyer(spot)}>Delete?</td>
               </tr>
           )
       });

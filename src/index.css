@@ -223,19 +223,34 @@ h3:not(:first-child) {
   margin-top: 2rem; }
 
 h1 {
-  font-size: 1.75rem; }
+  font-size: 1.75rem; 
+  color:whitesmoke;
+}
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  color:lightblue;
+}
+
 
 h3 {
-  font-size: 1.25rem; }
+  font-size: 1.25rem; 
+  color:lightblue;
+
+}
+  
 
 h4 {
-  font-size: 1.1rem; }
+  font-size: 1.1rem; 
+  color:lightblue;
+
+}
 
 h5 {
-  font-size: 1rem; }
+  font-size: 1rem;
+  color:lightblue;
+
+}
 
 @media (min-width: 600px) {
   h1:not(:first-child),
